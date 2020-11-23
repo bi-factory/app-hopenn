@@ -1,0 +1,20 @@
+{
+  "name": "app-hopenn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "json2csv": "^4.5.4",
+    "mkdirp": "^1.0.3",
+    "moment": "^2.24.0",
+    "node-cron": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/index.js",
+    "exec": "node src/main.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

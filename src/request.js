@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { urlBase, getHeaders } = require('./constants-old');
+const { urlBase, getHeaders } = require('./request-params');
 
 const headers = getHeaders()
 

@@ -1,7 +1,7 @@
 const axios = require("axios");
-const { urlBase, getHeaders } = require('./request-params');
+const { urlBase, getHeaders } = require("./request-params");
 
-const headers = getHeaders()
+const headers = getHeaders();
 
 async function getCount(endpoint) {
   try {
@@ -31,7 +31,6 @@ async function getData(endpoint, count) {
     console.error(`Error ${endpoint} ${error}`);
   }
 }
-
 
 module.exports = {
   getData,

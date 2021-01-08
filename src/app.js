@@ -24,22 +24,22 @@ async function getActivities() {
 
 
     csvConvert("./files/Activities", activityHeadersCount, "ActivityHeaders-count");
-    csvConvert("./files/Activities", activitiesHeaders, "ActivityHeaders", ['notes']);
+    csvConvert("./files/Activities", await activitiesHeaders, "ActivityHeaders", ['notes']);
 
     csvConvert("./files/Activities", activitiesCount, "Activities-count");
-    csvConvert("./files/Activities", activities, "Activities", ['notes']);
+    csvConvert("./files/Activities", await activities, "Activities", ['notes']);
 
     csvConvert("./files/Activities", activityCodesGroupTypesCount, "ActivityCodesGroupTypes-count");
-    csvConvert("./files/Activities", activityCodesGroupTypes, "ActivityCodesGroupTypes");
+    csvConvert("./files/Activities", await activityCodesGroupTypes, "ActivityCodesGroupTypes");
 
     csvConvert("./files/Activities", activitiesPurposesCount, "ActivitiesPurposes-count");
-    csvConvert("./files/Activities", activitiesPurposes, "ActivitiesPurposes");
+    csvConvert("./files/Activities", await activitiesPurposes, "ActivitiesPurposes");
 
     csvConvert("./files/Activities", activitiesStatusesCount, "ActivitiesStatuses-count");
-    csvConvert("./files/Activities", activitiesStatuses, "ActivitiesStatuses");
+    csvConvert("./files/Activities", await activitiesStatuses, "ActivitiesStatuses");
 
     csvConvert("./files/Activities", activitiesTypesCount, "ActivitiesTypes-count");
-    csvConvert("./files/Activities", activitiesTypes, "ActivitiesTypes");
+    csvConvert("./files/Activities", await activitiesTypes, "ActivitiesTypes");
 }
 
 
@@ -53,10 +53,10 @@ async function getCampaigns() {
 
 
     csvConvert("./files/Campaigns", campaignHeadersCount, "CampaignHeaders-count");
-    csvConvert("./files/Campaigns", campaignHeaders, "CampaignHeaders", ['campaigndescription']);
+    csvConvert("./files/Campaigns", await campaignHeaders, "CampaignHeaders", ['campaigndescription']);
 
     csvConvert("./files/Campaigns", campaignsCount, "Campaigns-count");
-    csvConvert("./files/Campaigns", campaigns, "Campaigns", ['description']);
+    csvConvert("./files/Campaigns", await campaigns, "Campaigns", ['description']);
 }
 
 
@@ -67,7 +67,7 @@ async function getCounties() {
 
 
     csvConvert("./files/Counties", countiesCount, "Counties-count");
-    csvConvert("./files/Counties", counties, "Counties", ['description']);
+    csvConvert("./files/Counties", await counties, "Counties", ['description']);
 }
 
 
@@ -84,13 +84,13 @@ async function getCustomers() {
 
 
     csvConvert("./files/Customers", customerCount, "Customers-count");
-    csvConvert("./files/Customers", customers, "Customers");
+    csvConvert("./files/Customers", await customers, "Customers");
 
     csvConvert("./files/Customers", customerARCount, "Customers-AR-count");
-    csvConvert("./files/Customers", customersAR, "Customers-AR");
+    csvConvert("./files/Customers", await customersAR, "Customers-AR");
 
     csvConvert("./files/Customers", customerPARCount, "Customer-PAR-count");
-    csvConvert("./files/Customers", CustomerPAR, "Customer-PAR");
+    csvConvert("./files/Customers", await CustomerPAR, "Customer-PAR");
 }
 
 
@@ -101,7 +101,7 @@ async function getDivisions() {
 
 
     csvConvert("./files/Divisions", divisionsCount, "Divisions-count");
-    csvConvert("./files/Divisions", divisions, "Divisions");
+    csvConvert("./files/Divisions", await divisions, "Divisions");
 }
 
 
@@ -112,7 +112,7 @@ async function getLostSales() {
 
 
     csvConvert("./files/Lost-Sales", lostSalesCount, "LostSales-count");
-    csvConvert("./files/Lost-Sales", lostSales, "LostSales");
+    csvConvert("./files/Lost-Sales", await lostSales, "LostSales");
 }
 
 
@@ -138,25 +138,25 @@ async function getOpportunities() {
 
 
     csvConvert("./files/Opportunities", opportunitiesCount, "Opportunities-count");
-    csvConvert("./files/Opportunities", opportunities, "Opportunities", [
+    csvConvert("./files/Opportunities", await opportunities, "Opportunities", [
         'productGroups',
         'notes'
     ]);
 
     csvConvert("./files/Opportunities", opportunityStageCount, "OpportunityCodesStages-count");
-    csvConvert("./files/Opportunities", opportunityStages, "OpportunityCodesStages");
+    csvConvert("./files/Opportunities", await opportunityStages, "OpportunityCodesStages");
 
     csvConvert("./files/Opportunities", opportunityCodesTypesCount, "OpportunityCodesTypes-count");
-    csvConvert("./files/Opportunities", opportunityCodesTypes, "OpportunityCodesTypes");
+    csvConvert("./files/Opportunities", await opportunityCodesTypes, "OpportunityCodesTypes");
 
     csvConvert("./files/Opportunities", opportunityHeadersCount, "OpportunityHeaders-count");
-    csvConvert("./files/Opportunities", opportunityHeaders, "OpportunityHeaders", ['comment']);
+    csvConvert("./files/Opportunities", await opportunityHeaders, "OpportunityHeaders", ['comment']);
 
     csvConvert("./files/Opportunities", opportunitiesPhasesCount, "Opportunities-Phases-count");
-    csvConvert("./files/Opportunities", opportunitiesPhases, "Opportunities-Phases");
+    csvConvert("./files/Opportunities", await opportunitiesPhases, "Opportunities-Phases");
 
     csvConvert("./files/Opportunities", opportunityProductItemsCount, "OpportunityProductItems-count");
-    csvConvert("./files/Opportunities", opportunityProductItems, "OpportunityProductItems", ['Comment']);
+    csvConvert("./files/Opportunities", await opportunityProductItems, "OpportunityProductItems", ['Comment']);
 }
 
 
@@ -175,16 +175,16 @@ async function getEquipment() {
     const pipeModels = getData("PipeModels", pipeModelsCount);
 
     csvConvert("./files/Equipment", pipeAreasCount, "PipeAreas-count");
-    csvConvert("./files/Equipment", pipeAreas, "PipeAreas");
+    csvConvert("./files/Equipment", await pipeAreas, "PipeAreas");
 
     csvConvert("./files/Equipment", pipeBaseModelsCount, "PipeBaseModels-count");
-    csvConvert("./files/Equipment", pipeBaseModels, "PipeBaseModels");
+    csvConvert("./files/Equipment", await pipeBaseModels, "PipeBaseModels");
 
     csvConvert("./files/Equipment", pipeFamiliesCount, "PipeFamilies-count");
-    csvConvert("./files/Equipment", pipeFamilies, "PipeFamilies");
+    csvConvert("./files/Equipment", await pipeFamilies, "PipeFamilies");
 
     csvConvert("./files/Equipment", pipeModelsCount, "PipeModels-count");
-    csvConvert("./files/Equipment", pipeModels, "PipeModels");
+    csvConvert("./files/Equipment", await pipeModels, "PipeModels");
 }
 
 
@@ -195,7 +195,7 @@ async function getPartsAndServiceQuotes() {
 
 
     csvConvert("./files/Parts-and-Service-Quotes", PSQuoteHeadersCount, "PSQuoteHeaders-count");
-    csvConvert("./files/Parts-and-Service-Quotes", PSQuoteHeaders, "PSQuoteHeaders", [
+    csvConvert("./files/Parts-and-Service-Quotes", await PSQuoteHeaders, "PSQuoteHeaders", [
         'QuoteStatusComment',
         'QuoteDescription',
         'OppComment',
@@ -218,13 +218,13 @@ async function getMachineQuotes() {
 
 
     csvConvert("./files/Machine-Quotes", quoteHeadersCount, "QuoteHeaders-count");
-    csvConvert("./files/Machine-Quotes", quoteHeaders, "QuoteHeaders", ['cancellationcomment']);
+    csvConvert("./files/Machine-Quotes", await quoteHeaders, "QuoteHeaders", ['cancellationcomment']);
 
     csvConvert("./files/Machine-Quotes", quoteCodesTypesCount, "QuoteCodesTypes-count");
-    csvConvert("./files/Machine-Quotes", quoteCodesTypes, "QuoteCodesTypes");
+    csvConvert("./files/Machine-Quotes", await quoteCodesTypes, "QuoteCodesTypes");
 
     csvConvert("./files/Machine-Quotes", quoteCodesStatusesCount, "QuoteCodesStatuses-count");
-    csvConvert("./files/Machine-Quotes", quoteCodesStatuses, "QuoteCodesStatuses");
+    csvConvert("./files/Machine-Quotes", await quoteCodesStatuses, "QuoteCodesStatuses");
 }
 
 
@@ -235,7 +235,7 @@ async function getRegions() {
 
 
     csvConvert("./files/Regions", regionsCount, "Regions-count");
-    csvConvert("./files/Regions", regions, "Regions");
+    csvConvert("./files/Regions", await regions, "Regions");
 }
 
 
@@ -249,10 +249,10 @@ async function getSalesReps() {
 
 
     csvConvert("./files/Sales-Reps", salesLinkSalesRepTypeDescsCount, "SalesLinkSalesRepTypeDescs-count");
-    csvConvert("./files/Sales-Reps", salesLinkSalesRepTypeDescs, "SalesLinkSalesRepTypeDescs");
+    csvConvert("./files/Sales-Reps", await salesLinkSalesRepTypeDescs, "SalesLinkSalesRepTypeDescs");
 
     csvConvert("./files/Sales-Reps", salesrepsCount, "SalesLinkSalesRepTypeDescs-count");
-    csvConvert("./files/Sales-Reps", salesreps, "SalesLinkSalesRepTypeDescs");
+    csvConvert("./files/Sales-Reps", await salesreps, "SalesLinkSalesRepTypeDescs");
 }
 
 

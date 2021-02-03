@@ -259,6 +259,8 @@ async function getSalesReps() {
 
 
 function generateData() {
+      try {
+
     getActivities();
     getCampaigns();
     getCounties();
@@ -271,6 +273,10 @@ function generateData() {
     getMachineQuotes();
     getRegions();
     getSalesReps();
+
+  } catch (error) {
+    console.log(error.message);
+  }
 }
 
 module.exports = { generateData };

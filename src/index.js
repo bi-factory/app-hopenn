@@ -1,9 +1,9 @@
-const cron = require("node-cron");
-const moment = require("moment");
+const cron = require('node-cron');
+const moment = require('moment');
 
-const { generateData } = require("./app");
+const { generateData } = require('./app');
 
-cron.schedule("0 1 * * *", () => {
-  console.log("Data generated: " + moment().format());
+cron.schedule('0 1 * * *', () => {
+  console.log('Data generated: ' + moment().format());
   generateData();
 });

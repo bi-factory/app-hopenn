@@ -1,15 +1,15 @@
-const axios = require("axios");
+const axios = require('axios');
 
-const Tenant = "hopenn";
+const Tenant = 'hopenn';
 const urlBase = `https://use-api.cloudlink.uptake.com/v1/${Tenant}`;
 const api_key =
-  "J_HmWd53FmFLG-YCNe-ZC88g7BLldbpURs71fbEhJ-hSq9tlmaBP7p5wBAX5396s";
+  'J_HmWd53FmFLG-YCNe-ZC88g7BLldbpURs71fbEhJ-hSq9tlmaBP7p5wBAX5396s';
 
 async function access_token() {
   try {
     const res = await axios.post(`${urlBase}/auth`, null, {
       headers: {
-        "x-api-key": api_key,
+        'x-api-key': api_key,
         Tenant: Tenant,
       },
     });
@@ -20,10 +20,10 @@ async function access_token() {
 }
 
 const getHeaders = async () => ({
-  "x-api-key": api_key,
+  'x-api-key': api_key,
   Authorization: await access_token(),
   Tenant: Tenant,
-  accept: "application/json",
+  accept: 'application/json',
 });
 
 module.exports = {
